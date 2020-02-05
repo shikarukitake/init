@@ -1,0 +1,4 @@
+You can find the installed version of your Debian in three files:
+1. /etc/debian_version
+2. /etc/os-release
+3. /etc/issue

@@ -1,0 +1,5 @@
+First you should find the IP that was assigned to you by dhcp server with command: 
+"ipconfig getpacket en0 | grep yiaddr | awk '{print $3}'"
+Then use command: nslookup 192.168.22.78 | grep name | awk '{print $4}'
+my output:
+at-m2.21-school.ru.
