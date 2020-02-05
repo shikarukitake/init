@@ -1,0 +1,4 @@
+cron
+It's the daemon to execute scheduled commands.
+To edit u can use 'crontab -e' command
+ 

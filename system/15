@@ -1,1 +1,4 @@
-ps | grep tail | awk '{print $1}' | xargs pkill
+#first way
+ps | grep tail | awk '{print $1}' | xargs kill
+#second way
+pkill tail
