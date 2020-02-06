@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cat $1 > /tmp/swap
+
+python3 - <<'END_SCRIPT' 
+import requests 
+
+f = open("/tmp/swap")
+text = f.read().strip()
+
+url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?'
+key = 'trnsl.1.1.20200206T162420Z.936d8aac38d13c76.a9468f86d45022b33bef107cdc4b9fc9ae3496a0'
+lang = 'en-ru'
+r = requests.post(url, data={'key': key, 'text': text, 'lang': lang}).json()
+print(r["text"][0])
+END_SCRIPT
+
+rm -rf swap

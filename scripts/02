@@ -1,0 +1,10 @@
+#!/bin/bash
+
+USER=$1
+
+if id "$USER" >/dev/null 2>&1; then
+	pgrep -u $USER | while read PID; do sudo kill -9 $PID; done
+	sudo userdel $USER	
+else
+	echo 'INVALID USERNAME'
+fi
