@@ -1,3 +1,3 @@
 You should search system configuration folder and thet open "resolv.conf"
 command: "cat /etc/resolv.conf"
-formated output command: "cat resolv.conf | grep "nameserver" | awk '{print $2}'"
+formated output command: "cat /etc/resolv.conf | grep "nameserver" | awk '{print $2}'"
