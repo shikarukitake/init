@@ -1,1 +1,1 @@
-service ssh stop
+systemctl list-units --type service --all
